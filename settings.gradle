@@ -1,4 +1,6 @@
 rootProject.name = 'sKeduler'
 include 'sKeduler-backend'
 include 'sKeduler-frontend'
+include 'core'
+include 'core'
 
