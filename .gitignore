@@ -1,5 +1,10 @@
 .gradle
 .idea
 /build/
+/out/
 /sKeduler-backend/build/
 /sKeduler-frontend/build/
+/core/build/
+/sKeduler-backend/out/
+/sKeduler-frontend/out/
+/core/out/
