@@ -1,9 +1,9 @@
 package com.jherrild.server;
 
-import com.jherrild.entity.Calendar;
-import com.jherrild.entity.Event;
+import com.jherrild.server.entity.Calendar;
+import com.jherrild.server.entity.Event;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,8 +20,9 @@ import java.util.HashMap;
  */
 @RestController
 @EnableAutoConfiguration
-@ComponentScan(basePackages = {"com.jherrild.entity"})
+@RequestMapping("/skeduler")
 public class ScheduleController {
+    @Autowired
     CalendarRepository calendarRepository;
     private HashMap<String, Calendar> calendars = new HashMap<>();
 
@@ -62,10 +63,6 @@ public class ScheduleController {
         }
     }
 
-    /**
-     * Returns a Calendar if one already exists with the specified name- otherwise creates one
-     * @return
-     */
     @RequestMapping(value="calendar/{calendarName}/events/{newEvent}", method = RequestMethod.GET)
     public @ResponseBody
     Event addEvent(@PathVariable String calendarName, @PathVariable String newEvent) {
@@ -79,11 +76,12 @@ public class ScheduleController {
     }
 
     /**
-     * Returns a boolean representation of whether there are conflicts with the given meeting
+     * Returns a boolean representation of whether there are conflicts with the given event
      * @return
      */
-    @RequestMapping(value="/conflicts/{time}", method = RequestMethod.GET)
-    public @ResponseBody boolean getConflicts(@PathVariable Date time) {
+    @RequestMapping(value="/conflicts/{calendar_name}/{time}", method = RequestMethod.GET)
+    public @ResponseBody
+    boolean getConflicts(@PathVariable Date time) {
         return false;
     }
 }
