@@ -1,6 +1,7 @@
 package com.jherrild.server;
 
 import com.jherrild.server.entity.Calendar;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 

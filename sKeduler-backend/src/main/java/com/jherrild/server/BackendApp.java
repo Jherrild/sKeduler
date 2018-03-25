@@ -14,12 +14,6 @@ public class BackendApp {
     ScheduleController scheduleController;
 
     public static void main(String[] args) throws Exception{
-        // Get Calendars from DB
-        syncWithDb();
         SpringApplication.run(BackendApp.class, args);
-    }
-
-    private static void syncWithDb() {
-        //NOOP
     }
 }
