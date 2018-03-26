@@ -28,4 +28,6 @@ public class Event implements Serializable{
     @Column(unique = true) private long ID;
     @Column(nullable = false) private Date startTime;
     @Column(nullable = false) private int length;
+    @Column(nullable = false) private int clientName;
+    @Column(nullable = false) private int description;
 }

@@ -1,0 +1,37 @@
+{
+  "name": "skeduler-frontend",
+  "version": "1.0.0",
+  "description": "Frontend web application for scheduling events",
+  "dependencies": {
+    "bootstrap": "4.0.0",
+    "jquery": "3.3.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jherrild/sKeduler.git"
+  },
+  "keywords": [
+    "Kotlin",
+    "Java",
+    "Fullstack",
+    "Web",
+    "Application",
+    "Sample",
+    "Practice",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Jesten Herrild (jestenh@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jherrild/sKeduler/issues"
+  },
+  "homepage": "https://github.com/Jherrild/sKeduler#readme"
+}
