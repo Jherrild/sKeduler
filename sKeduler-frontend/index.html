@@ -25,6 +25,10 @@
     <!-- Custom page styles -->
     <link href="css/page.css" rel="stylesheet">
 
+    <!-- Jquery UI Styles -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
 </head>
 
 <body>
@@ -59,6 +63,14 @@
                 </div>
                 <h1 class="pageTitle">sKeduler</h1>
                 <p class="pageContentMain">A sample scheduling app written in Kotlin and Java.</p>
+
+                <!-- sKeduler Application -->
+                <div class="inputDiv">
+                    <p class="datePicker">Date: <input type="text" class="datePicker" id="datepicker"></p>
+                    <p class="timepicker">Time: <input type="text" class="timepicker"></p>
+                </div>
+                <!-- sKeduler Application -->
+
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -70,12 +82,47 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- UI Jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+    <!-- Datepicker Script -->
+    <script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+        $( "#anim" ).on( "change", function() {
+        $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+        });
+    } );
+    </script>
+
+    <script>
+    $(document).ready(function(){
+    $('input.timepicker').timepicker({});
+    });
+    </script>
+
+    <script>
+    $('.timepicker').timepicker({
+    timeFormat: 'hh:mm p',
+    interval: 30,
+    minTime: '6',
+    maxTime: '6:00pm',
+    defaultTime: '11',
+    startTime: '06:00',
+    dynamic: false,
+    dropdown: true,
+    scrollbar: true
+    });
+    </script>
+
     <!-- Menu Toggle Script -->
     <script>
-        function menuToggle(e) {
-            $("#wrapper").toggleClass("toggled");
-            e.classList.toggle("change");        
-        }
+    function menuToggle(e) {
+        $("#wrapper").toggleClass("toggled");
+        e.classList.toggle("change");        
+    }
     </script>
 
 </body>

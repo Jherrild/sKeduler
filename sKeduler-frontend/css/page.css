@@ -1,3 +1,30 @@
 body {
     background-color: #F6F6F6;
 }
+
+.inputDiv {
+    margin-top: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    min-width: 200px;
+    box-shadow: 1px 1px 5px #555 inset;
+    padding: 20px;
+}
+
+.datePicker {
+    margin: 0 auto;
+    margin-top: 3%;
+    text-align: left;
+    position: relative;
+    width: 80%;     
+}
+
+.timepicker {
+    margin: 0 auto;
+    margin-top: 1%;
+    text-align: left;
+    position: relative;
+    width: 80%;
+}
