@@ -4,8 +4,11 @@ services:
   db:
     container_name: sKeduler-db
     image: mysql
+    command: --init-file /data/application/init.sql
     restart: always
     ports:
       - 3306:3306
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - $PWD/data/application/init.sql:/data/application/init.sql
