@@ -1,4 +1,4 @@
-package com.jherrild.server;
+package com.jherrild.server.persistence;
 
 import com.jherrild.server.entity.Calendar;
 import org.springframework.data.repository.CrudRepository;

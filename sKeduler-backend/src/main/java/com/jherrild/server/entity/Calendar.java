@@ -10,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
-import java.util.ArrayList;
 
 /**
  * @author jestenh@gmail.com
@@ -25,10 +24,8 @@ public class Calendar implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(unique = true) private long id;
     @Column(unique = true, nullable = false) private String name;
-    @Column(nullable = false) private ArrayList<Event> events;
 
-    public Calendar(String name, ArrayList<Event> events) {
+    public Calendar(String name) {
         this.name = name;
-        this.events = events;
     }
 }
