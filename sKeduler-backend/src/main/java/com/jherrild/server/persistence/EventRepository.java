@@ -23,7 +23,7 @@ public interface EventRepository extends CrudRepository<Event, Long> {
     @Nullable
     @Query("SELECT e FROM Event e WHERE e.calendarId = :calendarId AND ((e.startTime <= :startTime AND e.endTime > :startTime) OR ( e.startTime >= :startTime AND e.startTime <= :endTime))")
     Event countConflicts(@Param("calendarId") long calendarId,
-                       @Param("startTime") long startTime,
-                       @Param("endTime") long endTime);
+                         @Param("startTime") long startTime,
+                         @Param("endTime") long endTime);
 
 }
